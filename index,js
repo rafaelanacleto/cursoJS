@@ -8,3 +8,4 @@ function CalculaIdade(nascimento)
 
 
 console.log(CalculaIdade(1981));
+console.log("Meu nome é \"RAfael Anacleto\". Estou aprendendo Javascript as 10 da manhão")
