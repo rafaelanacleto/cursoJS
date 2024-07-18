@@ -1,0 +1,10 @@
+const dataAtual = new Date();
+
+function CalculaIdade(nascimento)
+{
+    return dataAtual.getFullYear() - nascimento;
+}
+
+
+
+console.log(CalculaIdade(1961));
