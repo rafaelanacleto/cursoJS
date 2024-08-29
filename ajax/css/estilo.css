@@ -70,3 +70,12 @@ li {
     color: greenyellow;
     font-weight: bold;
 }
+
+a.button {
+    padding: 2px 7px;
+    border: 1px outset buttonborder;
+    border-radius: 4px;
+    color: buttontext;
+    background-color: buttonface;
+    text-decoration: none;
+}
