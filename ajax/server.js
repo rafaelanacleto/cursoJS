@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true})) //
 app.use(bodyParser.json()) //se vier um json dentro do corpo da requisao
 
 const storage = multer.diskStorage({
-    dest: function(req, file, callback) {
+    destination: function(req, file, callback) {
         callback(null, './upload')
     },
     filename: function (req, file, callback) {
