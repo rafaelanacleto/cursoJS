@@ -38,8 +38,11 @@
                     config.progresso({ atual, total, percentual})
                 }
             }
+
+            xhr.open("post", config.url, true)
+            xhr.send(config.formData)
         }
-        
+
 
     </script>
 </body>
