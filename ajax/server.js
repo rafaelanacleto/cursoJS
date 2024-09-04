@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser')
 const express = require('express')
 const multer = require("multer") //interpretar formulario
+// const axios = require('axios').default;
 const app = express()
 
 app.use(express.static('.')) //dentro da pasta atual, sirva os arquivos staticos
@@ -34,5 +35,10 @@ app.post('/formulario', (req, res) => {
     }) 
 })
 
-app.get('/teste', (req, res) => res.send('Ok'))
+app.get('/teste', (req, res) => res.send({
+    id: 1,
+    nome: 'rafael',
+    idade: 40
+}))
+
 app.listen(8080, () => console.log("Executando.."))
