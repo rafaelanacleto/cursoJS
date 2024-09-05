@@ -35,6 +35,10 @@ app.post('/formulario', (req, res) => {
     }) 
 })
 
+app.get('/parOuImpar', (req, res) => {
+    const par = parseInt()
+})
+
 app.get('/teste', (req, res) => res.send({
     id: 1,
     nome: 'rafael',

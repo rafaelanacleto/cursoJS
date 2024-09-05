@@ -11,25 +11,28 @@
 <body class="conteudo exercicio">
     <h1>Estados</h1>
 
-
     <hr>
     <a href="/" class="button">Voltar...</a>
-    <script>
-
-        // Faz uma requisição a um usuarío com um ID expecifico
+    <script>        
         const url = './dados/estados.json'
+
         axios.get(url)
             .then(function (response) {
                 // manipula o sucesso da requisição
-                console.log(response);
+
+                const itens = response.data.reduce(
+                    (html, estado) => html + `<li>${estado.nome}</li>`, ''
+                )
+
+                document.body.insertAdjacentHTML("beforeend", `<ul>${itens}</ul>`)
             })
             .catch(function (error) {
                 // manipula erros da requisição
                 console.error(error);
             })
             .finally(function () {
-                console.error("finally");
-                console.info("Exemplo de Info");
+                //sempre será executado no final
+                console.info("Bloco finally : sempre será executado no final");
             });
     </script>
 </body>
