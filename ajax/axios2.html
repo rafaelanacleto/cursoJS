@@ -13,11 +13,24 @@
     <div id="get"></div>
     <div id="post"></div>
 
-
-
     <hr>
     <a href="/" class="button">Voltar...</a>
     <script>
-        // ...
+        const url = 'parOuImpar?numero=55'
+
+        axios.get(url)
+            .then(function (response) {
+                // manipula o sucesso da requisição
+               const resul = response.resultado
+               var elemento = document.getElementById('get')               
+               elemento.innerHTML = JSON.stringify(response.data.resultado)
+            })
+            .catch(function (error) {                
+                console.error(error);
+            })
+            .finally(function () {
+                //sempre será executado no final
+                console.info("Bloco finally : sempre será executado no final");
+            });
     </script>
 </body>
